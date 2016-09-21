@@ -4,7 +4,7 @@
 ### Fabien Franchini
 ### Sébastien Henneberger
 
-## But de l'application
+## Goal of the application
 
 ## Informations about custom Docker image
 
