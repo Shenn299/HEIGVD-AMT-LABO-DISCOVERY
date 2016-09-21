@@ -2,8 +2,7 @@
 
 ### Etudiants:
 #### Fabien Franchini
-#### Sébastien Henneberger
-
+#### Sébastien Henneberger    
 
 
 ### Objecive of the lab
