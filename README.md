@@ -19,7 +19,7 @@
 ####
 
 ### Instruction about running Docker
-#### Go in the topology directory and execute "docker-compose up" command
+#### Go in the topology directory and execute `docker-compose up` command
 #### The application server will start
 ####
 
