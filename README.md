@@ -4,6 +4,6 @@
 ### Fabien Franchini
 ### Sébastien Henneberger
 
-Instruction about running docker
+## Instruction about running docker
 
-Instruction for the URL
+## Instruction for the URL
