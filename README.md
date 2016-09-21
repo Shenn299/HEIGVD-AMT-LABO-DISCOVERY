@@ -21,4 +21,4 @@ The application server will start
 
 ## Instruction for the URL
 Once the application server is started, go to this URL: http://192.168.99.100:9090/welcomeMessage
-If you use "Docker for Mac/Windows/Linux" version, go to http://localhost:9090/welcomeMessage
+If you use "Docker for Mac/Windows/Linux" version, go to <http://localhost:9090/welcomeMessage>
