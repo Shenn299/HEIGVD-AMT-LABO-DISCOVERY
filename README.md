@@ -1,8 +1,8 @@
 # HEIGVD-AMT-LABO-DISCOVERY
 
-Etudiants:
-Fabien Franchini
-Sébastien Henneberger
+## Etudiants:
+### Fabien Franchini
+### Sébastien Henneberger
 
 Instruction about running docker
 
