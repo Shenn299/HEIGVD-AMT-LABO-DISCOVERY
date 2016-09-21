@@ -1,0 +1,7 @@
+version: '2'
+services:
+  wildfly:
+    build: ../image/wildfly
+    ports:
+     - "9090:8080"
+     - "9990:9990"
