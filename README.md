@@ -1,4 +1,4 @@
-# HEIGVD-AMT-LABO-DISCOVERY
+# HEIGVD-AMT-PROJECT1
 
 ## Etudiants:
 Fabien Franchini  
