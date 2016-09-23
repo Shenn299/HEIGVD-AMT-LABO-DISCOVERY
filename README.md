@@ -10,7 +10,7 @@ Sébastien Henneberger
 Autodeploy a very simple Java EE app in application server WildFly
 
 ## Goal of the app (feature 1)
-Display a welcome message in a nice template HTML
+Display a welcome message in a nice template HTML (create landing page)
 
 ## Informations about Docker image
 We use the jboss/wildfly Docker image available in Docker Hub
