@@ -17,7 +17,7 @@ We use the jboss/wildfly Docker image available in Docker Hub
 https://hub.docker.com/r/jboss/wildfly/
 
 ## Instruction about running Docker
-Go in the topology directory and execute `docker-compose up` command  
+Go in the `topology` directory and execute `docker-compose up` command  
 
 The application server will start
 
