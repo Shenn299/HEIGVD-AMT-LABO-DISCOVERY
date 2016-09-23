@@ -6,10 +6,10 @@ Fabien Franchini
 Sébastien Henneberger    
 
 
-## Objecive of the lab
+## Objecive of the lab (feature 1)
 Autodeploy a very simple Java EE app in application server WildFly
 
-## Goal of the app
+## Goal of the app (feature 1)
 Display a welcome message in a nice template HTML
 
 ## Informations about Docker image
