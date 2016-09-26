@@ -1,2 +1,2 @@
 FROM jboss/wildfly
-ADD LandingPageApp.war /opt/jboss/wildfly/standalone/deployments/
+ADD /autodeploy/LandingPageApp.war /opt/jboss/wildfly/standalone/deployments/
