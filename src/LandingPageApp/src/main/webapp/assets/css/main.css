@@ -435,23 +435,29 @@ a:after {
 
 /* BUTTON CONF */
 
-.btn-theme {
-	color: #fff;
-	background-color: #1abc9c;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	font-weight: 700;
-	border-radius: 3px;
+.myButton {
+	background-color:#9fa6a1;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:"Raleway";
+	font-size:15px;
+	padding:5px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background-color:#000000;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
-.btn-theme:hover {
-	cursor: pointer;
-	color: white;
-	background-color: #16a085;
-	
-}
 
 /* TEAM CONF */
 
