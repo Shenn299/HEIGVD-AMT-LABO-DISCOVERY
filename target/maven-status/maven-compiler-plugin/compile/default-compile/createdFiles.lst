@@ -1,0 +1,3 @@
+ch\heigvd\amt\gamificationapp\model\User.class
+ch\heigvd\amt\gamificationapp\web\UsersServlet.class
+ch\heigvd\amt\gamificationapp\services\UserManager.class
