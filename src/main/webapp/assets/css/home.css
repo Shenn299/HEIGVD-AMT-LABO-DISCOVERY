@@ -1,0 +1,21 @@
+.button {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #A4A4A4;
+  width: 30%;
+  border: 0;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+   border-radius:28px;
+   border:1px solid #ffffff;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.button:hover,.form button:active,.form button:focus {
+  background: #000000;
+}
