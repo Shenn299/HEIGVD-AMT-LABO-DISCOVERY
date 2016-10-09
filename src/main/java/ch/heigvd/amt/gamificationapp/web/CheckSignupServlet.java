@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ch.heigvd.amt.gamificationapp.web;
 
 import ch.heigvd.amt.gamificationapp.model.User;
-import ch.heigvd.amt.gamificationapp.services.Notification;
-import ch.heigvd.amt.gamificationapp.services.UserManager;
+import ch.heigvd.amt.gamificationapp.services.UserManagerServiceLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,8 +18,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "CheckSignupServlet", urlPatterns = {"/CheckSignup"})
 public class CheckSignupServlet extends HttpServlet {
-
-   Notification notification = new Notification();
+ 
+   @EJB
+   private UserManagerServiceLocal userManagerService;
 
    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
    /**
@@ -63,25 +60,24 @@ public class CheckSignupServlet extends HttpServlet {
 
       String username = request.getParameter("username");
       String password = request.getParameter("password");
+      String notification = "";
 
       boolean error = false;
 
       if (username == null || username.trim().equals("")) {
-         notification.setMessage("Username entered is not valid !");
+         notification = "Username entered is not valid !";
          error = true;
       } else if (password == null || password.trim().equals("")) {
-         notification.setMessage("Password entered is not valid !");
+         notification = "Password entered is not valid !";
          error = true;
       }
 
       // if username and password format are correct
       if (!error) {
 
-         UserManager userManager = new UserManager();
-
          // Check if username is available
-         if (userManager.usernameIsAvailable(username)) {
-            userManager.addUser(new User(username, password));
+         if (userManagerService.usernameIsAvailable(username)) {
+            userManagerService.addUser(new User(username, password));
             //request.getServletContext().setAttribute("userManager", userManager);
             
             // User session creation
@@ -90,7 +86,7 @@ public class CheckSignupServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/pages/Home.jsp").forward(request, response);
             
          } else {
-            notification.setMessage("Sorry, this username is already taken !");
+            notification = "Sorry, this username is already taken !";
          }
 
       }

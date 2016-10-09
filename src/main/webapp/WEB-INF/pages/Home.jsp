@@ -15,5 +15,10 @@
       <form action="Logout" class="login-form" method="POST">
          <input type="submit" class="button" name="logout" value="Log Out"/>
       </form>
+      
+      <form action="userManager.html" class="login-form">
+         <input type="submit" class="button" value="User manager"/>
+      </form>      
+      
    </body>
 </html>

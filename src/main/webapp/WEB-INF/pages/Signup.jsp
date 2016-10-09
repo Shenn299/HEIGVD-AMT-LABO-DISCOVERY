@@ -15,7 +15,7 @@
 
       <div id="headerwrap">
          <h1>Please, Sign Up ! </h1>
-         <h2>${requestScope.signupMessage.message}</h2>
+         <h2>${requestScope.signupMessage}</h2>
       </div>
 
       <div class="login-page">

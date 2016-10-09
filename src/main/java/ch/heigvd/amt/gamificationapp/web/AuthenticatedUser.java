@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ch.heigvd.amt.gamificationapp.web;
 
-import ch.heigvd.amt.gamificationapp.services.Notification;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -48,35 +43,6 @@ public class AuthenticatedUser implements Filter {
          log("AuthenticatedUser:DoBeforeProcessing");
       }
 
-      // Write code here to process the request and/or response before
-      // the rest of the filter chain is invoked.
-      // For example, a filter that implements setParameter() on a request
-      // wrapper could set parameters on the request before passing it on
-      // to the filter chain.
-      /*
-	String [] valsOne = {"val1a", "val1b"};
-	String [] valsTwo = {"val2a", "val2b", "val2c"};
-	request.setParameter("name1", valsOne);
-	request.setParameter("nameTwo", valsTwo);
-       */
-      // For example, a logging filter might log items on the request object,
-      // such as the parameters.
-      /*
-	for (Enumeration en = request.getParameterNames(); en.hasMoreElements(); ) {
-	    String name = (String)en.nextElement();
-	    String values[] = request.getParameterValues(name);
-	    int n = values.length;
-	    StringBuffer buf = new StringBuffer();
-	    buf.append(name);
-	    buf.append("=");
-	    for(int i=0; i < n; i++) {
-	        buf.append(values[i]);
-	        if (i < n-1)
-	            buf.append(",");
-	    }
-	    log(buf.toString());
-	}
-       */
    }   
    
    private void doAfterProcessing(RequestWrapper request, ResponseWrapper response)
@@ -85,41 +51,6 @@ public class AuthenticatedUser implements Filter {
          log("AuthenticatedUser:DoAfterProcessing");
       }
 
-      // Write code here to process the request and/or response after
-      // the rest of the filter chain is invoked.
-      // For example, a logging filter might log the attributes on the
-      // request object after the request has been processed. 
-      /*
-	for (Enumeration en = request.getAttributeNames(); en.hasMoreElements(); ) {
-	    String name = (String)en.nextElement();
-	    Object value = request.getAttribute(name);
-	    log("attribute: " + name + "=" + value.toString());
-
-	}
-       */
-      // For example, a filter might append something to the response.
-      /*
-	PrintWriter respOut = new PrintWriter(response.getWriter());
-	respOut.println("<p><strong>This has been appended by an intrusive filter.</strong></p>");
-	
-	respOut.println("<p>Params (after the filter chain):<br>");
-	for (Enumeration en = request.getParameterNames(); en.hasMoreElements(); ) {
-		String name = (String)en.nextElement();
-		String values[] = request.getParameterValues(name);
-		int n = values.length;
-		StringBuffer buf = new StringBuffer();
-		buf.append(name);
-		buf.append("=");
-		for(int i=0; i < n; i++) {
-		    buf.append(values[i]);
-		    if (i < n-1)
-			buf.append(",");
-		}
-		log(buf.toString());
-		respOut.println(buf.toString() + "<br>");
-	}
-        respOut.println("</p>");
-       */
    }
 
    /**
@@ -139,7 +70,6 @@ public class AuthenticatedUser implements Filter {
          log("AuthenticatedUser:doFilter()");
       }
       
-
       // Create wrappers for the request and response objects.
       // Using these, you can extend the capabilities of the
       // request and response, for example, allow setting parameters
