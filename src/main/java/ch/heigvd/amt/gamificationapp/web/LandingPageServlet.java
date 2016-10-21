@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author seb
  */
-@WebServlet(name = "LandingPageServlet", urlPatterns = {"/"})
 public class LandingPageServlet extends HttpServlet {
 
    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -27,6 +26,7 @@ public class LandingPageServlet extends HttpServlet {
    @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
            throws ServletException, IOException {
+      
       request.getRequestDispatcher("/WEB-INF/pages/LandingPage.jsp").forward(request, response);
    }
 

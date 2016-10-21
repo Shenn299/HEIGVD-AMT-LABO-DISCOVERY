@@ -73,31 +73,7 @@ a:after {
     padding: 0;
 }
 
-
-/* ==========================================================================
-   Wrap Sections
-   ========================================================================== */
-
-#headerwrap {
-	background: url(../img/header-bg.jpg) no-repeat center top;
-	margin-top: -10px;
-	padding-top:20px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 700px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+/* Wrap sections */
 
 #headerwrap h1 {
 	margin-top: 130px;
@@ -113,38 +89,6 @@ a:after {
 	font-weight: 100;
 	letter-spacing: 2px;
 }
-
-/* Portfolio Wrap */
-#portfoliowrap {
-	background: url(../img/portfolio-bg.jpg) no-repeat center top;
-	margin-top: 0px;
-	padding-top:70px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 500px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
-#portfoliowrap h3 {
-	color: #ffffff;
-}
-
-.port-space {
-	padding-bottom: 20px;
-}
-
 
 /* White Wrap */
 
@@ -441,14 +385,12 @@ a:after {
 	-webkit-border-radius:28px;
 	border-radius:28px;
 	border:1px solid #ffffff;
-	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:"Raleway";
 	font-size:15px;
 	padding:5px 18px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
 }
 .myButton:hover {
 	background-color:#000000;
@@ -457,7 +399,6 @@ a:after {
 	position:relative;
 	top:1px;
 }
-
 
 /* TEAM CONF */
 

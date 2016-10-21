@@ -1,25 +1,23 @@
 
 package ch.heigvd.amt.gamificationapp.web;
 
-import ch.heigvd.amt.gamificationapp.services.UserManagerServiceLocal;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import ch.heigvd.amt.gamificationapp.services.UsersManagerServiceLocal;
 
 /**
  *
  * @author seb
  */
-@WebServlet(name = "CheckLoginServlet", urlPatterns = {"/CheckLogin"})
 public class CheckLoginServlet extends HttpServlet {
    
    @EJB
-   private UserManagerServiceLocal userManagerService;
+   private UsersManagerServiceLocal usersManagerService;
 
    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
    /**
@@ -34,14 +32,15 @@ public class CheckLoginServlet extends HttpServlet {
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
            throws ServletException, IOException {
       
-      // If the user session exists
-      if (request.getSession(false) != null) {
-         // An user is connected
+      HttpSession session = request.getSession(false);
+      
+      if (session != null && session.getAttribute("identity") != null) {
+         // An user is authenticated
          request.getRequestDispatcher("/WEB-INF/pages/Home.jsp").forward(request, response);
       }
       else {
-         // Nobody is connected
-        request.getRequestDispatcher("/WEB-INF/pages/Login.jsp").forward(request, response);
+         // Nobody is authenticated
+         request.getRequestDispatcher("/WEB-INF/pages/Login.jsp").forward(request, response);
       }
    }
 
@@ -63,20 +62,23 @@ public class CheckLoginServlet extends HttpServlet {
 
       boolean error = false;
 
-      if (username == null || username.trim().equals("")) {
+      if (!usersManagerService.isSyntacticallyValid(username)) {
          notification = "Username entered is not valid !";
          error = true;
-      } else if (password == null || password.trim().equals("")) {
+      } else if (!usersManagerService.isSyntacticallyValid(password)) {
          notification = "Password entered is not valid !";
          error = true;
       }
 
+      username = usersManagerService.normalize(username);
+      password = usersManagerService.normalize(password);
+      
       // if username and password format are correct
       if (!error) {
 
          // Check if credentials entered are correct
          //UserManager userManager = (UserManager) request.getServletContext().getAttribute("userManager");
-         if (userManagerService.areCredentialsCorrect(username, password)) {
+         if (usersManagerService.areCredentialsCorrect(username, password)) {
             // User session creation
             request.getSession();
             request.getSession(false).setAttribute("identity", new String(username));
@@ -92,8 +94,7 @@ public class CheckLoginServlet extends HttpServlet {
       request.getRequestDispatcher("/WEB-INF/pages/Login.jsp").forward(request, response);
 
       response.setContentType("text/html;charset=UTF-8");
-      try (PrintWriter out = response.getWriter()) {
-      }
+
    }
 
    /**
