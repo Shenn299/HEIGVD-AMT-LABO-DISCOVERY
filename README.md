@@ -44,7 +44,7 @@ In the presentation tier, especially in the servlet which is responsable to mana
 
 2. The second is to have a reference on the service tier which implements DAO. It is used when all conditions are met to directly speak with the database via DAO, without passing by the service tier which implements logic business. It's clearly a bypass, and that add two ways to the diagram, but like this we don't uselessly pass inside the logic business and we don't need to create additional methods in the business logic which do just a call to DAO methods.
 
-#### User buffer (discuted with Laurent Prévost)
+#### User buffer
 We could have thought that we could implement a buffer that contains all User (in the business logic or DAO service) to not always speak with database via DAO to get simple result (check if username already exists, for example), but it's not the goal of these two services.
 
 #### encodage
