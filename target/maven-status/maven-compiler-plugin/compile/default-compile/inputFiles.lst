@@ -1,12 +1,17 @@
+C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\model\package-info.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\services\dao\UsersManagerDAO.java
+C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\services\package-info.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\services\UsersManagerService.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\services\dao\UsersManagerDAOLocal.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\CheckSignupServlet.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\HomeServlet.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\LogoutServlet.java
+C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\rest\package-info.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\org\netbeans\rest\application\config\ApplicationConfig.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\SignupServlet.java
+C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\rest\dto\package-info.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\rest\UserResource.java
+C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\package-info.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\CheckLoginServlet.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\LandingPageServlet.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\rest\PATCH.java
@@ -14,5 +19,6 @@ C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamific
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\rest\dto\UserDTO.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\AuthenticatedUserFilter.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\rest\RESTApplication.java
+C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\services\dao\package-info.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\services\UsersManagerServiceLocal.java
 C:\Users\seb\Desktop\tmp\HEIGVD-AMT-PROJECT1\src\main\java\ch\heigvd\amt\gamificationapp\web\LoginServlet.java

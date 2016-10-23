@@ -27,9 +27,10 @@ import javax.servlet.http.HttpSession;
 /**
  * Filter used to check if the client is authorized to access the desired
  * resource. Authorization implemented with white list. A User authenticated in
- * the web app have a session and a locations white list. A User not
+ * the web app has a session and a locations white list. A User not
  * authenticated in the web app doesn't have a session but he has a locations
- * white list too.
+ * white list too. If the user isn't authorized to access the resource, he's
+ * redirected to the Login page.
  *
  * @author F. Franchini, S. Henneberger
  */
@@ -46,7 +47,7 @@ public class AuthenticatedUserFilter implements Filter {
    }
 
    /**
-    * 
+    *
     * @param request  The servlet request we are processing
     * @param response The servlet response we are creating
     * @param chain    The filter chain we are processing

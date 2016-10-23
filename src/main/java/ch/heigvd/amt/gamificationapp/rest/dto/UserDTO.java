@@ -4,42 +4,42 @@ package ch.heigvd.amt.gamificationapp.rest.dto;
 /**
  * Real user representation that is serialized and deserialized in JSON,
  * received by and sent to the client. It's the transferred resource between
- * third party client and the third party presentation.
+ * client tier and the presentation tier.
  *
  * @author F. Franchini, S. Henneberger
  */
 public class UserDTO {
 
-    /**
-     * The unique identifier
-     */
-    long id;
+   /**
+    * The unique identifier
+    */
+   long id;
 
-    /**
-     * The username
-     */
-    private String username;
+   /**
+    * The username
+    */
+   private String username;
 
-    public UserDTO() {
-    }
+   public UserDTO() {
+   }
 
-    /**
-     * Create a new <code>UserDTO</code> instance with the id and the username.
-     *
-     * @param id       the unique identfier
-     * @param username the username
-     */
-    public UserDTO(long id, String username) {
-        this.id = id;
-        this.username = username;
-    }
+   /**
+    * Create a new <code>UserDTO</code> instance with the id and the username.
+    *
+    * @param id       the unique identfier
+    * @param username the username
+    */
+   public UserDTO(long id, String username) {
+      this.id = id;
+      this.username = username;
+   }
 
-    public long getId() {
-        return id;
-    }
+   public long getId() {
+      return id;
+   }
 
-    public String getUsername() {
-        return username;
-    }
+   public String getUsername() {
+      return username;
+   }
 
 }

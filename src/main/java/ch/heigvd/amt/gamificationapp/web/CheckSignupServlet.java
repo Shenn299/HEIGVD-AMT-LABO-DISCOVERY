@@ -1,3 +1,4 @@
+
 package ch.heigvd.amt.gamificationapp.web;
 
 import ch.heigvd.amt.gamificationapp.model.User;
@@ -12,17 +13,23 @@ import ch.heigvd.amt.gamificationapp.services.UsersManagerServiceLocal;
 import ch.heigvd.amt.gamificationapp.services.dao.UsersManagerDAOLocal;
 
 /**
+ * Servlet called after that the client filled out the sign up form and pressed
+ * the submit button. It used to verify if username already exists in database
+ * and if the two passwords are identical.
  *
- * @author seb
+ * @author F. Franchini, S. Henneberger
  */
 public class CheckSignupServlet extends HttpServlet {
 
+   /**
+    * Reference to use service tier that implements business logic.
+    */
    @EJB
    private UsersManagerServiceLocal usersManagerService;
 
-   // If all conditions are met (user_id exits and user_name is available),
-   // we use directly DAO service without to pass via the business service,
-   // because we don't change data, we simply treat them.
+   /**
+    * Reference to use service tier that implements DAO.
+    */
    @EJB
    private UsersManagerDAOLocal usersManagerDAO;
 
@@ -30,19 +37,21 @@ public class CheckSignupServlet extends HttpServlet {
    /**
     * Handles the HTTP <code>GET</code> method.
     *
-    * @param request servlet request
+    * @param request  servlet request
     * @param response servlet response
     * @throws ServletException if a servlet-specific error occurs
-    * @throws IOException if an I/O error occurs
+    * @throws IOException      if an I/O error occurs
     */
    @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
            throws ServletException, IOException {
 
+      // Get the user session
       HttpSession session = request.getSession(false);
 
+      // Check if user session exists
       if (session != null && session.getAttribute("identity") != null) {
-         // An user is authenticated
+         // A user is authenticated
          request.getRequestDispatcher("/WEB-INF/pages/Home.jsp").forward(request, response);
       }
       else {
@@ -54,10 +63,10 @@ public class CheckSignupServlet extends HttpServlet {
    /**
     * Handles the HTTP <code>POST</code> method.
     *
-    * @param request servlet request
+    * @param request  servlet request
     * @param response servlet response
     * @throws ServletException if a servlet-specific error occurs
-    * @throws IOException if an I/O error occurs
+    * @throws IOException      if an I/O error occurs
     */
    @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -85,10 +94,6 @@ public class CheckSignupServlet extends HttpServlet {
 
       // if username and password format are correct
       if (!error) {
-
-         username = usersManagerService.normalize(username);
-         password = usersManagerService.normalize(password);
-         passwordConfirmed = usersManagerService.normalize(passwordConfirmed);
 
          // Check if username is available
          if (usersManagerService.usernameIsAvailable(username)) {

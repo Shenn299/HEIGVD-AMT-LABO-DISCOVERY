@@ -5,7 +5,6 @@ import ch.heigvd.amt.gamificationapp.model.User;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import ch.heigvd.amt.gamificationapp.services.dao.UsersManagerDAOLocal;
-import java.nio.charset.Charset;
 
 /**
  * Service tier which implements the business logic.
@@ -21,11 +20,6 @@ public class UsersManagerService implements UsersManagerServiceLocal {
      */
     @EJB
     private UsersManagerDAOLocal usersManagerDAO;
-
-    @Override
-    public String normalize(String stringToNormalize) {
-        return new String(stringToNormalize.getBytes(), Charset.forName("UTF-8"));
-    }
 
     @Override
     public boolean isSyntacticallyValid(String stringToTest) {
