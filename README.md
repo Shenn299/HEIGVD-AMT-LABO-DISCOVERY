@@ -18,14 +18,14 @@ https://hub.docker.com/r/jboss/wildfly/
 Go in the `topology` directory and execute `docker-compose up` command.
 
 ## Instruction about accessing the application via your browser
-URL of the app: {IP}:9090/amtbootcampApp
+**URL of the app: {IP}:9090/amtbootcampApp**
 
-If you use Docker for Windows (<https://docs.docker.com/docker-for-windows/>) or Docker for Mac (<https://docs.docker.com/docker-for-mac/>), replace {IP} per "localhost" or "127.0.0.1".
+If you use **Docker for Windows** (<https://docs.docker.com/docker-for-windows/>) or **Docker for Mac** (<https://docs.docker.com/docker-for-mac/>), replace {IP} per "localhost" or "127.0.0.1".
 
 <http://localhost:9090/amtbootcampApp>   
 <http://127.0.0.1:9090/amtbootcampApp>
 
-If you use Docker tool box, replace {IP} per the ip of the machine that Docker is configured to use. By default, Docker is configured to use default machine with ip 192.168.99.100.
+If you use **Docker toolbox**, replace {IP} per the ip of the machine that Docker is configured to use. By default, Docker is configured to use default machine with ip 192.168.99.100.
 
 If you are not sure about which machine is running, you can know this information with this command "docker-machine active".
 For exemple, if it's "machine1" which is running, then enter "docker-machine ip machine1", to know with which ip.
@@ -33,7 +33,6 @@ For exemple, if it's "machine1" which is running, then enter "docker-machine ip 
 You can also enter "docker-machine ls", to list all machines.
 
 Default machine : <192.168.99.100:9090/amtbootcampApp>
-
 
 ## Information about implementation
 
